@@ -85,6 +85,7 @@
     let playerName = '';
     let timerInterval = null;
     let selectedAnswer = null;
+    let currentQuestionIndex = -1;
 
     function showScreen(id) {
       document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
@@ -161,6 +162,11 @@
     function showQuestion(data) {
       showScreen('student-question-screen');
       selectedAnswer = null;
+      currentQuestionIndex = data.questionIndex;
+
+      // Clear any previous correct answer display
+      document.getElementById('feedback-correct-answer').innerHTML = '';
+      document.getElementById('feedback-waiting').textContent = 'Waiting for next question...';
 
       document.getElementById('sq-current').textContent = data.questionIndex + 1;
       document.getElementById('sq-total').textContent = data.totalQuestions;
@@ -250,10 +256,13 @@
     }
 
     function showCorrectAnswer(data) {
+      // Only show if this result matches the question the student just answered
+      if (data.questionIndex !== currentQuestionIndex) return;
+
       showScreen('feedback-screen');
       clearInterval(timerInterval);
 
-      // Show the correct answer
+      // Show the correct answer with question context
       const correctEl = document.getElementById('feedback-correct-answer');
       const colors = ['opt-red', 'opt-blue', 'opt-yellow', 'opt-green'];
       const correctOption = data.options[data.correctAnswer];
@@ -266,7 +275,7 @@
         </div>
       `;
 
-      // Hide the waiting text since answer is revealed
+      // Update the waiting text
       document.getElementById('feedback-waiting').textContent = 'Get ready for the next question...';
     }
 

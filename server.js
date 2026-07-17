@@ -318,6 +318,7 @@ wss.on('connection', (ws) => {
         const qIndex = gameState.currentQuestionIndex;
         const question = quizData.questions[qIndex];
         broadcast('question-results', {
+          questionIndex: qIndex,
           question: question.question,
           options: question.options,
           correctAnswer: question.correctAnswer,
