@@ -152,7 +152,8 @@
 
     function connectWebSocket() {
       if (wsConnection) wsConnection.close();
-      wsConnection = new WebSocket(`ws://${window.location.host}`);
+      const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+      wsConnection = new WebSocket(`${protocol}//${window.location.host}`);
 
       wsConnection.onopen = () => {
         wsConnection.send(JSON.stringify({ type: 'host-join' }));
