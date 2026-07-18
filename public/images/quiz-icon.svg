@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="currentColor" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Bulb body -->
+  <path d="M256 48c-77 0-140 63-140 140 0 50 26 93 66 118 14 9 24 24 28 41h92c4-17 14-32 28-41 40-25 66-68 66-118 0-77-63-140-140-140z" stroke="#000" fill="none"/>
+  <!-- Bulb base lines -->
+  <line x1="200" y1="370" x2="312" y2="370" stroke="#000"/>
+  <line x1="210" y1="400" x2="302" y2="400" stroke="#000"/>
+  <!-- Bulb bottom -->
+  <path d="M224 430c0 18 14 34 32 34s32-16 32-34" stroke="#000" fill="none"/>
+  <!-- Question mark -->
+  <path d="M236 200c0-20 16-32 32-32 18 0 32 14 32 32 0 14-10 22-20 28-8 5-12 12-12 20" stroke="#000" fill="none"/>
+  <circle cx="256" cy="272" r="6" fill="#000" stroke="none"/>
+  <!-- Light rays -->
+  <line x1="120" y1="140" x2="90" y2="120" stroke="#000"/>
+  <line x1="100" y1="188" x2="65" y2="188" stroke="#000"/>
+  <line x1="120" y1="236" x2="90" y2="256" stroke="#000"/>
+  <line x1="392" y1="140" x2="422" y2="120" stroke="#000"/>
+  <line x1="412" y1="188" x2="447" y2="188" stroke="#000"/>
+  <line x1="392" y1="236" x2="422" y2="256" stroke="#000"/>
+</svg>
