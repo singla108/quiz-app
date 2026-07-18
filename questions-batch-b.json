@@ -61,7 +61,7 @@
     {
       "id": 9,
       "question": "Which two firms does the deck name as participating in the FCA's AI Live Testing?",
-      "options": ["Barclays and UBS", "NatWest and HSBC", "Lloyds and Santander", "Monzo and Revolut"],
+      "options": ["Natwest, Barclays and UBS", "NatWest, Lloyds and HSBC", "HSBC, Lloyds and Santander", "HSBC, Monzo and Revolut"],
       "correctAnswer": 0,
       "timeLimit": 20
     },
