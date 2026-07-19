@@ -1,8 +1,8 @@
-# MDI Gurgaon - AI in BFSI Quiz App
+# Live Classroom Quiz
 
-A real-time interactive quiz application built for classroom sessions. Students scan a QR code to join from their phones, answer timed questions, and compete on a live leaderboard — similar to Kahoot but free, custom application built using AI, self-hosted on Render and fully customizable.
+A real-time interactive quiz application built for classroom sessions. Students scan a QR code to join from their phones, answer timed questions, and compete on a live leaderboard — similar to Kahoot but free, custom-built, self-hosted on Render, and fully customizable.
 
-Built for the **"AI, Generative AI & Agentic AI in Banking, Financial Services & Insurance"** session at MDI Gurgaon.
+Originally built for the **"AI, Generative AI & Agentic AI in Banking, Financial Services & Insurance"** session at MDI Gurgaon, and designed to be reused for any classroom or workshop by swapping in your own question batches.
 
 ## Screenshots
 
@@ -53,7 +53,7 @@ npm install
 npm start
 ```
 
-Open `http://localhost:3000` on the projector — that's the host dashboard.  
+Open `http://localhost:3000` on the projector — that's the host dashboard.
 Students scan the QR code or visit the URL shown to join.
 
 ## How It Works
@@ -74,7 +74,7 @@ Host (Projector)                    Students (Phones)
 ## Project Structure
 
 ```
-Quiz/
+.
 ├── server.js                  # Node.js server (Express + WebSocket)
 ├── questions-batch-a.json     # Batch A questions (12 questions)
 ├── questions-batch-b.json     # Batch B questions (12 questions)
@@ -88,7 +88,7 @@ Quiz/
     ├── student.html           # Student mobile interface
     ├── styles.css             # All styling
     └── images/
-        ├── mdi-logo.png       # MDI Gurgaon logo
+        ├── mdi-logo.png       # MDI Gurgaon logo (from the original session)
         └── quiz-icon.svg      # Quiz bulb icon (favicon)
 ```
 
@@ -114,6 +114,8 @@ Edit `questions-batch-a.json` or `questions-batch-b.json`:
 
 - `correctAnswer` is 0-indexed (0=A, 1=B, 2=C, 3=D)
 - `timeLimit` is seconds per question (overrides the default)
+
+This is the main hook for reusing the app for a different class or topic — swap in new question batches without touching the app logic.
 
 ### Adding a New Batch
 
